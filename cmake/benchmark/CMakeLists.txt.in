@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.12)
+project(benchmark-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(benchmark
+  GIT_REPOSITORY    https://github.com/google/benchmark.git
+  GIT_TAG           56898e9a92fba537671d5462df9c5ef2ea6a823a  # 2020-04-23
+  SOURCE_DIR        "${CMAKE_BINARY_DIR}/benchmark-src"
+  BINARY_DIR        "${CMAKE_BINARY_DIR}/benchmark-build"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND     ""
+  INSTALL_COMMAND   ""
+  TEST_COMMAND      ""
+)
